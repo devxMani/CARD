@@ -1,0 +1,138 @@
+leetcode-analytics/
+│
+├── backend/
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── userController.js
+│   │   ├── services/
+│   │   │   ├── leetcodeApiService.js
+│   │   │   └── leetcodeScraperService.js
+│   │   ├── routes/
+│   │   │   └── userRoutes.js
+│   │   ├── utils/
+│   │   │   └── errorHandler.js
+│   │   └── app.js
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── LeetCodeStatsCard.js
+│   │   │   └── Header.js
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── styles/
+│   │   │   └── tailwind.css
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+│
+├── README.md
+└── .gitignore
+
+
+Certainly! I'll outline a recommended folder structure for this project, which separates the backend and frontend for better organization and scalability. Here's a suggested folder structure:
+
+```
+leetcode-analytics/
+│
+├── backend/
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── userController.js
+│   │   ├── services/
+│   │   │   ├── leetcodeApiService.js
+│   │   │   └── leetcodeScraperService.js
+│   │   ├── routes/
+│   │   │   └── userRoutes.js
+│   │   ├── utils/
+│   │   │   └── errorHandler.js
+│   │   └── app.js
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── LeetCodeStatsCard.js
+│   │   │   └── Header.js
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── styles/
+│   │   │   └── tailwind.css
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+│
+├── README.md
+└── .gitignore
+```
+
+Let's break down this structure:
+
+1. Root directory (`leetcode-analytics/`):
+   - Contains both backend and frontend directories
+   - `README.md` for project documentation
+   - `.gitignore` for specifying files to ignore in version control
+
+2. Backend (`backend/`):
+   - `node_modules/`: Contains installed npm packages
+   - `src/`: Source code for the backend
+     - `controllers/`: Handle request/response logic
+     - `services/`: Business logic for interacting with LeetCode API and web scraping
+     - `routes/`: Define API routes
+     - `utils/`: Utility functions like error handling
+     - `app.js`: Main application file
+   - `.env`: Environment variables (e.g., API keys, port numbers)
+   - `package.json` and `package-lock.json`: Node.js project configuration and dependencies
+
+3. Frontend (`frontend/`):
+   - `node_modules/`: Contains installed npm packages
+   - `public/`: Static assets and HTML template
+   - `src/`: Source code for the frontend
+     - `components/`: React components
+     - `services/`: API interaction logic
+     - `styles/`: CSS files (if using Tailwind, you might have a base CSS file here)
+     - `App.js`: Main React component
+     - `index.js`: Entry point for the React application
+   - `.env`: Environment variables (e.g., API endpoint)
+   - `package.json` and `package-lock.json`: Node.js project configuration and dependencies
+
+To implement this structure:
+
+1. Create the folder structure as shown above.
+
+2. Move the backend code we created earlier into appropriate files:
+   - Main Express app logic goes in `backend/src/app.js`
+   - User data fetching logic goes in `backend/src/services/leetcodeApiService.js`
+   - Web scraping logic goes in `backend/src/services/leetcodeScraperService.js`
+   - Route handling goes in `backend/src/routes/userRoutes.js`
+   - Controller logic goes in `backend/src/controllers/userController.js`
+
+3. Move the React component we created into `frontend/src/components/LeetCodeStatsCard.js`
+
+4. Create a new `App.js` in the frontend to render the `LeetCodeStatsCard` component.
+
+5. Set up the necessary build and start scripts in both `package.json` files.
+
+This structure separates concerns, making the code more maintainable and scalable. It also allows for easier deployment of the backend and frontend to separate services if needed.
+
+Would you like me to provide more details on how to set up any specific part of this structure?
+
